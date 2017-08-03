@@ -28,5 +28,5 @@ puts "Вот что получилось:"
 case encr_mechanism
 when 1 then puts Digest::MD5.hexdigest(phrase)
 when 2 then puts Digest::SHA1.hexdigest(phrase)
-when 1 then puts Digest::SHA2.hexdigest(phrase)
+when 3 then puts Digest::SHA2.hexdigest(phrase)
 end
