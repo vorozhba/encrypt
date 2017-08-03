@@ -15,10 +15,11 @@ phrase = STDIN.gets.chomp
 puts "Каким способом зашифровать:"
 puts "1. MD5"
 puts "2. SHA1"
+puts "3. SHA2"
 encr_mechanism = STDIN.gets.to_i
 
-until encr_mechanism.between?(1, 2)
-  puts "Выберите 1 или 2"
+until encr_mechanism.between?(1, 3)
+  puts "Выберите 1, 2 или 3"
   encr_mechanism = STDIN.gets.to_i
 end
 
@@ -27,4 +28,5 @@ puts "Вот что получилось:"
 case encr_mechanism
 when 1 then puts Digest::MD5.hexdigest(phrase)
 when 2 then puts Digest::SHA1.hexdigest(phrase)
+when 1 then puts Digest::SHA2.hexdigest(phrase)
 end
